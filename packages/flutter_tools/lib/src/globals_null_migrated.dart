@@ -54,11 +54,15 @@ BuildSystem? get buildSystem => context.get<BuildSystem>();
 Cache get cache => context.get<Cache>()!;
 CocoaPodsValidator? get cocoapodsValidator => context.get<CocoaPodsValidator>();
 Config get config => context.get<Config>()!;
+<<<<<<< HEAD
 CrashReporter? get crashReporter => context.get<CrashReporter>();
 DeviceManager? get deviceManager => context.get<DeviceManager>();
 Doctor? get doctor => context.get<Doctor>();
 HttpClientFactory? get httpClientFactory => context.get<HttpClientFactory>();
 IOSSimulatorUtils? get iosSimulatorUtils => context.get<IOSSimulatorUtils>();
+=======
+HttpClientFactory? get httpClientFactory => context.get<HttpClientFactory>();
+>>>>>>> b22742018b3edf16c6cadd7b76d9db5e7f9064b5
 Logger get logger => context.get<Logger>()!;
 OperatingSystemUtils get os => context.get<OperatingSystemUtils>()!;
 Signals get signals => context.get<Signals>() ?? LocalSignals.instance;

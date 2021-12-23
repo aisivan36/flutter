@@ -26,4 +26,8 @@ flutter:
     androidPackage: com.example.multiple_flutters_module
     iosBundleIdentifier: com.example.multipleFluttersModule
 
+<<<<<<< HEAD
 # PUBSPEC CHECKSUM: ac15
+=======
+# PUBSPEC CHECKSUM: cc0f
+>>>>>>> b22742018b3edf16c6cadd7b76d9db5e7f9064b5

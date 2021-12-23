@@ -863,11 +863,28 @@ class FlutterVmService {
     });
 
     try {
+<<<<<<< HEAD
       final List<vm_service.IsolateRef> refs = await _getIsolateRefs();
       for (final vm_service.IsolateRef ref in refs) {
         final vm_service.Isolate? isolate = await getIsolateOrNull(ref.id!);
         if (isolate != null && isolate.extensionRPCs?.contains(extensionName) == true) {
           return ref;
+=======
+      final List<FlutterView> flutterViews = await getFlutterViews();
+      if (flutterViews.isEmpty) {
+        throw VmServiceDisappearedException();
+      }
+
+      for (final FlutterView flutterView in flutterViews) {
+        final vm_service.IsolateRef isolateRef = flutterView.uiIsolate;
+        if (isolateRef == null) {
+          continue;
+        }
+
+        final vm_service.Isolate isolate = await getIsolateOrNull(isolateRef.id);
+        if (isolate != null && isolate.extensionRPCs.contains(extensionName)) {
+          return isolateRef;
+>>>>>>> b22742018b3edf16c6cadd7b76d9db5e7f9064b5
         }
       }
       return await extensionAdded.future;
